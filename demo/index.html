@@ -9,16 +9,60 @@
 
     <script type="text/javascript" src="x-tag-components.js"></script> 
     <script type="text/javascript" src="../src/main.js"></script>      
-	<style>
-
-	</style>
-</head>
+<style type="text/css">
+			
+			
+			body {
+				padding: 0;
+				margin: 0;
+				background: #555;
+				font-family: Arial;
+			}
+			
+			section {
+				position: relative;
+				height: 400px;
+				width: 50%;
+				max-width: 500px;
+				margin: 100px auto;
+				background: #fff;
+				box-shadow: 0 1px 4px 1px;
+			}
+			
+			ul {
+				display: table;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				background: red;
+				white-space: nowrap;
+			}
+			
+			li {
+				display: table-cell;
+				background: #ddd;
+				border: 1px solid: #bbb;
+			}
+			
+			
+			
+		</style>
+	</head>
 
 <body>
-
-	<h2>Create a Demo</h2>
-
-
+	<section id="wrap">
+		<ul id="list">
+			<li>ONE - ONE - ONE</li>
+			<li>TWO - TWO - TWO</li>
+			<li>THREE - THREE - THREE</li>
+		</ul>
+	</section>
 </body>
+
+<script>
+	xtag.addEvent(document.body.firstElementChild, 'resize', function(e){
+		console.log(e);
+	});
+</script>
 
 </html>
